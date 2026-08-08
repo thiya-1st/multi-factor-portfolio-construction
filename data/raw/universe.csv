@@ -1,0 +1,128 @@
+﻿Company,Ticker,Country,Band,Sector,Reason
+RELX plc,REL.L,UK,Mega,Information Services,Proprietary data and analytics embedded in legal scientific and risk workflows
+Experian plc,EXPN.L,UK,Large,Information Services,Credit bureau data with regulatory barriers to entry
+Auto Trader Group plc,AUTO.L,UK,Mid,Information Services,Online vehicle marketplace with network-effect dynamics
+Rightmove plc,RMV.L,UK,Mid,Information Services,UK property listings marketplace with incumbent network effects
+RM plc,RM.L,UK,Small,Information Services,Education resources and digital publishing facing structural sector pressure
+Future plc,FUTR.L,UK,Small,Information Services,Digital media and publishing facing advertising-market volatility
+S&P Global Inc,SPGI,US,Mega,Information Services,Credit ratings and index business with regulatory and network barriers
+Moody's Corp,MCO,US,Large,Information Services,Ratings duopoly participant with high recurring revenue
+MSCI Inc,MSCI,US,Large,Information Services,Index licensing embedded in institutional asset allocation
+Verisk Analytics Inc,VRSK,US,Large,Information Services,Proprietary insurance-industry data with high renewal rates
+Equifax Inc,EFX,US,Large,Information Services,Consumer credit bureau data comparable to Experian
+FactSet Research Systems,FDS,US,Mid,Information Services,Subscription financial data terminal facing competitive intensity
+Gartner Inc,IT,US,Large,Information Services,Subscription research and advisory with high renewal rates
+TransUnion,TRU,US,Mid,Information Services,Consumer and commercial credit data comparable to Equifax and Experian
+Dun & Bradstreet Holdings,DNB,US,Small,Information Services,Business credit data provider carrying elevated leverage and margin pressure
+Sage Group plc,SGE.L,UK,Large,Software & Technology,SMB accounting and ERP software with subscription switching costs
+Softcat plc,SCT.L,UK,Mid,Software & Technology,IT infrastructure reseller and services with recurring customer relationships
+Computacenter plc,CCC.L,UK,Mid,Software & Technology,IT services and technology reseller with embedded enterprise relationships
+Bytes Technology Group,BYIT.L,UK,Small,Software & Technology,Software and IT services reseller with recurring licensing revenue
+NCC Group plc,NCC.L,UK,Small,Software & Technology,Cybersecurity assurance services with historically volatile margins
+Trustpilot Group plc,TRST.L,UK,Small,Software & Technology,Online reviews platform with network effects but intense competition
+Microsoft Corp,MSFT,US,Mega,Software & Technology,Ubiquitous enterprise software ecosystem
+Adobe Inc,ADBE,US,Large,Software & Technology,Creative and document software with subscription lock-in
+Intuit Inc,INTU,US,Large,Software & Technology,SMB and consumer tax and accounting software with network effects
+ServiceNow Inc,NOW,US,Large,Software & Technology,Enterprise workflow platform with high switching costs once implemented
+Autodesk Inc,ADSK,US,Large,Software & Technology,Design and engineering software with industry-standard file formats
+Workday Inc,WDAY,US,Large,Software & Technology,HR and finance systems of record still scaling toward mature margins
+Cadence Design Systems,CDNS,US,Large,Software & Technology,Semiconductor design software with high switching costs
+Synopsys Inc,SNPS,US,Large,Software & Technology,EDA software embedded in chip design workflows
+PTC Inc,PTC,US,Mid,Software & Technology,Product lifecycle management and CAD software with moderate competitive intensity
+Dropbox Inc,DBX,US,Mid,Software & Technology,Cloud storage and collaboration software facing intense competitive pressure
+Box Inc,BOX,US,Small,Software & Technology,Enterprise cloud content management at smaller scale with thinner margins
+Unilever plc,ULVR.L,UK,Mega,Consumer Staples,Global branded household and personal-care portfolio
+Diageo plc,DGE.L,UK,Large,Consumer Staples,Premium spirits brand portfolio with pricing power
+British American Tobacco,BATS.L,UK,Large,Consumer Staples,High cash conversion tobacco brands facing structural volume decline
+Associated British Foods,ABF.L,UK,Large,Consumer Staples,Diversified food ingredients and Primark retail conglomerate
+Reckitt Benckiser Group,RKT.L,UK,Large,Consumer Staples,Household and health brands undergoing margin and portfolio pressure
+PZ Cussons plc,PZC.L,UK,Small,Consumer Staples,Smaller-scale personal-care brands with emerging-market exposure
+Fevertree Drinks plc,FEVR.L,UK,Small,Consumer Staples,Premium mixer brand facing increased competitive intensity
+Greggs plc,GRG.L,UK,Mid,Consumer Staples,UK food-on-the-go retailer with recurring consumer demand
+Nichols plc,NICL.L,UK,Small,Consumer Staples,Branded soft drinks with niche category positioning
+Procter & Gamble Co,PG,US,Mega,Consumer Staples,Diversified branded household and personal-care portfolio
+Coca-Cola Co,KO,US,Mega,Consumer Staples,Global beverage brand and bottler distribution network
+PepsiCo Inc,PEP,US,Mega,Consumer Staples,Diversified snacks and beverage brand portfolio
+Colgate-Palmolive Co,CL,US,Large,Consumer Staples,Category-leading oral and personal-care brand share
+Church & Dwight Co,CHD,US,Mid,Consumer Staples,Smaller diversified household-brand portfolio
+McCormick & Co,MKC,US,Mid,Consumer Staples,Branded spices and flavourings with niche category leadership
+Kraft Heinz Co,KHC,US,Large,Consumer Staples,Packaged food brands facing volume and pricing pressure
+Hormel Foods Corp,HRL,US,Mid,Consumer Staples,Branded packaged meat and food products with moderate pricing power
+Halma plc,HLMA.L,UK,Large,Asset-Light Industrials,Portfolio of niche safety health and environmental technology businesses
+Diploma plc,DPLM.L,UK,Large,Asset-Light Industrials,Distributor of specialised technical products with high repeat revenue
+Bunzl plc,BNZL.L,UK,Large,Asset-Light Industrials,Asset-light distribution of consumable business products
+Rotork plc,ROR.L,UK,Mid,Asset-Light Industrials,Flow-control actuators with meaningful aftermarket revenue
+Spectris plc,SXS.L,UK,Mid,Asset-Light Industrials,Precision instrumentation exposed to industrial capex cycles
+Spirax Group plc,SPX.L,UK,Mid,Asset-Light Industrials,Steam and thermal engineering niche leadership with service revenue
+IMI plc,IMI.L,UK,Large,Asset-Light Industrials,Flow-control and process-automation engineering with aftermarket mix
+Croda International,CRDA.L,UK,Mid,Asset-Light Industrials,Specialty chemicals with technical formulation differentiation facing cyclical demand
+Oxford Instruments plc,OXIG.L,UK,Small,Asset-Light Industrials,Scientific and research instrumentation with niche technical positioning
+Roper Technologies,ROP,US,Large,Asset-Light Industrials,Portfolio of niche asset-light software and industrial businesses
+IDEX Corp,IEX,US,Mid,Asset-Light Industrials,Niche fluidics and engineered products with aftermarket mix
+Fortive Corp,FTV,US,Large,Asset-Light Industrials,Diversified industrial technology portfolio
+Dover Corp,DOV,US,Large,Asset-Light Industrials,Diversified engineered products across multiple end markets
+Ametek Inc,AME,US,Large,Asset-Light Industrials,Electronic instruments and electromechanical devices with niche positioning
+Renishaw plc,RSW.L,UK,Mid,Specialist B2B & Niche,Precision metrology and engineering IP with global niche leadership
+Victrex plc,VCT.L,UK,Small,Specialist B2B & Niche,High-performance polymer specialist facing recent margin pressure
+Bodycote plc,BOY.L,UK,Small,Specialist B2B & Niche,Thermal-processing services embedded in customer manufacturing lines
+Genus plc,GNS.L,UK,Small,Specialist B2B & Niche,Animal-genetics IP with long reinvestment runway
+DCC plc,DCC.L,UK,Large,Specialist B2B & Niche,Diversified sales marketing and distribution across energy technology and healthcare
+Hill & Smith plc,HILS.L,UK,Mid,Specialist B2B & Niche,Niche infrastructure products manufacturing and distribution
+Treatt plc,TET.L,UK,Small,Specialist B2B & Niche,Specialty flavour and fragrance ingredients with technical differentiation
+Fastenal Co,FAST,US,Large,Specialist B2B & Niche,Industrial fasteners and supplies distribution with vendor-managed-inventory relationships
+MSC Industrial Direct,MSM,US,Mid,Specialist B2B & Niche,Industrial MRO distribution with moderate growth profile
+W.W. Grainger Inc,GWW,US,Large,Specialist B2B & Niche,MRO distribution scale with embedded procurement relationships
+IDEXX Laboratories,IDXX,US,Large,Specialist B2B & Niche,Veterinary diagnostics niche leadership with recurring consumables
+Watts Water Technologies,WTS,US,Mid,Specialist B2B & Niche,Water safety and flow-control products with niche technical positioning
+Applied Industrial Technologies,AIT,US,Mid,Specialist B2B & Niche,Industrial parts and MRO distribution with regional density economics
+Standex International,SXI,US,Small,Specialist B2B & Niche,Diversified niche industrial manufacturing across multiple segments
+Intertek Group plc,ITRK.L,UK,Large,Regulatory Environmental Testing,Global testing inspection and certification with accreditation barriers
+Ricardo plc,RCP.L,UK,Small,Regulatory Environmental Testing,Engineering and environmental consultancy servicing regulated industries
+Renewi plc,RWI.L,UK,Small,Regulatory Environmental Testing,Waste-to-product recycling operator facing margin and regulatory volatility
+Veralto Corp,VLTO,US,Large,Regulatory Environmental Testing,Water-quality and product-testing instruments spun out of Danaher
+Waste Management Inc,WM,US,Large,Regulatory Environmental Testing,Regulatory-barrier waste collection and disposal with pricing power
+Republic Services Inc,RSG,US,Large,Regulatory Environmental Testing,Comparable regulatory-moat waste business to Waste Management
+Clean Harbors Inc,CLH,US,Mid,Regulatory Environmental Testing,Hazardous-waste handling with cyclical industrial exposure
+Mettler-Toledo International,MTD,US,Large,Regulatory Environmental Testing,Precision instruments for regulated pharma and food industries
+Casella Waste Systems,CWST,US,Mid,Regulatory Environmental Testing,Regional solid-waste operator with regulatory permitting barriers
+Tetra Tech Inc,TTEK,US,Mid,Regulatory Environmental Testing,Environmental and engineering consulting servicing regulated clients
+Montrose Environmental Group,MEG,US,Small,Regulatory Environmental Testing,Environmental testing and remediation services at smaller scale
+Waste Connections Inc,WCN,US,Large,Regulatory Environmental Testing,Solid-waste operator with regional density and permitting barriers
+Smith & Nephew plc,SN.L,UK,Large,Healthcare & Life Sciences,Medical devices in orthopaedics and wound care with margins lagging US peers
+ConvaTec Group plc,CTEC.L,UK,Mid,Healthcare & Life Sciences,Advanced wound ostomy and continence care consumables with recurring demand
+Spire Healthcare Group,SPI.L,UK,Small,Healthcare & Life Sciences,Private hospital operator with capital-intensive facility economics
+Advanced Medical Solutions,AMS.L,UK,Small,Healthcare & Life Sciences,Wound-care technology and adhesives with technical differentiation
+Alliance Pharma plc,APH.L,UK,Small,Healthcare & Life Sciences,Consumer healthcare brands with moderate scale and mixed portfolio performance
+IQVIA Holdings Inc,IQV,US,Large,Healthcare & Life Sciences,Clinical research and proprietary healthcare data for pharma clients
+Thermo Fisher Scientific,TMO,US,Mega,Healthcare & Life Sciences,Life-science tools and consumables embedded in laboratory workflows
+Danaher Corp,DHR,US,Large,Healthcare & Life Sciences,Diversified life-science and diagnostics tools with disciplined operating model
+Becton Dickinson & Co,BDX,US,Large,Healthcare & Life Sciences,Medical devices and consumables with embedded hospital procurement relationships
+Charles River Laboratories,CRL,US,Mid,Healthcare & Life Sciences,Preclinical CRO services embedded in drug-development pipelines
+West Pharmaceutical Services,WST,US,Large,Healthcare & Life Sciences,Drug-delivery packaging components with regulatory switching costs
+Envista Holdings,NVST,US,Mid,Healthcare & Life Sciences,Dental products company facing demand and margin softness since spin-off
+Bio-Techne Corp,TECH,US,Mid,Healthcare & Life Sciences,Life-science reagents and diagnostics tools at smaller scale than sector leaders
+London Stock Exchange Group,LSEG.L,UK,Large,Payments & Financial Infrastructure,Market infrastructure and data business with network effects
+TP ICAP Group plc,TCAP.L,UK,Small,Payments & Financial Infrastructure,Interdealer broker and market infrastructure with moderate competitive intensity
+PayPoint plc,PAY.L,UK,Small,Payments & Financial Infrastructure,UK payments and retail network infrastructure
+Alpha Group International,ALPH.L,UK,Small,Payments & Financial Infrastructure,FX risk management and international payments services
+Visa Inc,V,US,Mega,Payments & Financial Infrastructure,Global card payments network with high switching costs
+Mastercard Inc,MA,US,Mega,Payments & Financial Infrastructure,Card payments network comparable to Visa
+Intercontinental Exchange,ICE,US,Large,Payments & Financial Infrastructure,Exchanges plus data and mortgage technology with network and regulatory moat
+Nasdaq Inc,NDAQ,US,Large,Payments & Financial Infrastructure,Exchange and market-technology data business comparable to LSEG
+CME Group Inc,CME,US,Large,Payments & Financial Infrastructure,Derivatives exchange with deep network-effect moat
+Global Payments Inc,GPN,US,Mid,Payments & Financial Infrastructure,Merchant payment processing in a more competitively intense segment
+Fiserv Inc,FI,US,Large,Payments & Financial Infrastructure,Payments and fintech infrastructure for banks with high switching costs
+Fidelity National Information Services,FIS,US,Large,Payments & Financial Infrastructure,Bank and capital-markets technology infrastructure provider
+Corpay Inc,CPAY,US,Mid,Payments & Financial Infrastructure,Corporate payments and expense-management infrastructure
+Rentokil Initial plc,RTO.L,UK,Large,Mission-Critical Services,Pest control and hygiene services with recurring route-density contracts
+Compass Group plc,CPG.L,UK,Large,Mission-Critical Services,Contract catering and food services with high contract-retention rates
+Mears Group plc,MER.L,UK,Small,Mission-Critical Services,Outsourced housing and social-care maintenance services
+Serco Group plc,SRP.L,UK,Mid,Mission-Critical Services,Outsourced public-sector services carrying contract-renewal risk
+PageGroup plc,PAGE.L,UK,Mid,Mission-Critical Services,Recruitment services with cyclical revenue exposure
+Automatic Data Processing,ADP,US,Large,Mission-Critical Services,Payroll and HR outsourcing with high embedded switching costs
+Paychex Inc,PAYX,US,Large,Mission-Critical Services,SMB payroll and HR outsourcing comparable to ADP at smaller scale
+Cintas Corp,CTAS,US,Large,Mission-Critical Services,Uniform and facility services with route-density economics
+Jack Henry & Associates,JKHY,US,Mid,Mission-Critical Services,Core banking technology infrastructure for community banks and credit unions
+Rollins Inc,ROL,US,Large,Mission-Critical Services,Pest-control services comparable to Rentokil with route-density economics
+UniFirst Corp,UNF,US,Mid,Mission-Critical Services,Uniform and workwear rental services with regional route density
+Healthcare Services Group,HCSG,US,Small,Mission-Critical Services,Outsourced housekeeping and dining services for healthcare facilities
