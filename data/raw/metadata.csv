@@ -1,0 +1,121 @@
+ticker,currency,sharesOutstanding,exchange,industry
+REL.L,GBp,1744452527,LSE,Specialty Business Services
+EXPN.L,GBp,883872470,LSE,Consulting Services
+AUTO.L,GBp,782870337,LSE,Internet Content & Information
+RMV.L,GBp,739147834,LSE,Internet Content & Information
+RM.L,GBp,97466747,LSE,Software - Application
+FUTR.L,GBp,90386913,LSE,Publishing
+SPGI,USD,294800000,NYQ,Financial Data & Stock Exchanges
+MCO,USD,173180984,NYQ,Financial Data & Stock Exchanges
+MSCI,USD,72700000,NYQ,Financial Data & Stock Exchanges
+VRSK,USD,131021840,NMS,Consulting Services
+EFX,USD,117484896,NYQ,Consulting Services
+FDS,USD,35565543,NYQ,Financial Data & Stock Exchanges
+IT,USD,63148976,NYQ,Information Technology Services
+TRU,USD,191600000,NYQ,Financial Data & Stock Exchanges
+SGE.L,GBp,897540993,LSE,Software - Application
+SCT.L,GBp,196331204,LSE,Electronics & Computer Distribution
+CCC.L,GBp,104948626,LSE,Information Technology Services
+BYIT.L,GBp,232553114,LSE,Software - Infrastructure
+NCC.L,GBp,276146128,LSE,Software - Infrastructure
+TRST.L,GBp,385596483,LSE,Software - Application
+MSFT,USD,7425545491,NMS,Software - Infrastructure
+ADBE,USD,397500000,NMS,Software - Application
+INTU,USD,273537000,NMS,Software - Application
+NOW,USD,1033862000,NYQ,Software - Application
+ADSK,USD,211145251,NMS,Software - Application
+WDAY,USD,201000000,NMS,Software - Application
+CDNS,USD,275816000,NMS,Software - Application
+SNPS,USD,191479325,NMS,Software - Infrastructure
+PTC,USD,108506261,NMS,Software - Application
+DBX,USD,158037382,NMS,Software - Infrastructure
+BOX,USD,138532634,NYQ,Software - Infrastructure
+ULVR.L,GBp,2154327344,LSE,Household & Personal Products
+DGE.L,GBp,2223599782,LSE,Beverages - Wineries & Distilleries
+BATS.L,GBp,2156569602,LSE,Tobacco
+ABF.L,GBp,699444374,LSE,Packaged Foods
+RKT.L,GBp,635083427,LSE,Household & Personal Products
+PZC.L,GBp,420353569,LSE,Household & Personal Products
+FEVR.L,GBp,112350093,LSE,Beverages - Non-Alcoholic
+GRG.L,GBp,101955014,LSE,Restaurants
+NICL.L,GBp,36565080,LSE,Beverages - Non-Alcoholic
+PG,USD,2328598978,NYQ,Household & Personal Products
+KO,USD,4302549243,NYQ,Beverages - Non-Alcoholic
+PEP,USD,1366000000,NMS,Beverages - Non-Alcoholic
+CL,USD,797172829,NYQ,Household & Personal Products
+CHD,USD,237203907,NYQ,Household & Personal Products
+MKC,USD,254055150,NYQ,Packaged Foods
+KHC,USD,1185823758,NMS,Packaged Foods
+HRL,USD,550284207,NYQ,Packaged Foods
+HLMA.L,GBp,377678275,LSE,Conglomerates
+DPLM.L,GBp,134094839,LSE,Industrial Distribution
+BNZL.L,GBp,321093154,LSE,Food Distribution
+ROR.L,GBp,813482038,LSE,Specialty Industrial Machinery
+SPX.L,GBp,73795881,LSE,Specialty Industrial Machinery
+IMI.L,GBp,238909408,LSE,Specialty Industrial Machinery
+CRDA.L,GBp,139354139,LSE,Specialty Chemicals
+OXIG.L,GBp,54991938,LSE,Scientific & Technical Instruments
+ROP,USD,98900874,NMS,Software - Application
+IEX,USD,73719896,NYQ,Specialty Industrial Machinery
+FTV,USD,304861021,NYQ,Scientific & Technical Instruments
+DOV,USD,134680225,NYQ,Specialty Industrial Machinery
+AME,USD,229203002,NYQ,Specialty Industrial Machinery
+RSW.L,GBp,72734797,LSE,Scientific & Technical Instruments
+VCT.L,GBp,87126221,LSE,Specialty Chemicals
+BOY.L,GBp,169507305,LSE,Specialty Industrial Machinery
+GNS.L,GBp,66413228,LSE,Biotechnology
+DCC.L,GBp,85424135,LSE,Oil & Gas Refining & Marketing
+HILS.L,GBp,78145658,LSE,Engineering & Construction
+TET.L,GBp,59035132,LSE,Specialty Chemicals
+FAST,USD,1147497573,NMS,Industrial Distribution
+MSM,USD,55846298,NYQ,Industrial Distribution
+GWW,USD,47213119,NYQ,Industrial Distribution
+IDXX,USD,78882997,NMS,Diagnostics & Research
+WTS,USD,27466760,NYQ,Specialty Industrial Machinery
+AIT,USD,36959541,NYQ,Industrial Distribution
+SXI,USD,12114922,NYQ,Specialty Industrial Machinery
+ITRK.L,GBp,153496203,LSE,Specialty Business Services
+RCP.L,GBp,123759566,LSE,
+VLTO,USD,243793344,NYQ,Pollution & Treatment Controls
+WM,USD,399715184,NYQ,Waste Management
+RSG,USD,306212978,NYQ,Waste Management
+CLH,USD,52787248,NYQ,Waste Management
+MTD,USD,20036559,NYQ,Diagnostics & Research
+CWST,USD,62621741,NMS,Waste Management
+TTEK,USD,256044428,NMS,Engineering & Construction
+WCN,USD,252049532,NYQ,Waste Management
+SN.L,GBp,838040613,LSE,Medical Devices
+CTEC.L,GBp,1954454579,LSE,Medical Instruments & Supplies
+SPI.L,GBp,400597780,LSE,Medical Care Facilities
+AMS.L,GBp,217564795,LSE,Medical Instruments & Supplies
+IQV,USD,164600000,NYQ,Diagnostics & Research
+TMO,USD,369747286,NYQ,Diagnostics & Research
+DHR,USD,702986054,NYQ,Diagnostics & Research
+BDX,USD,272386800,NYQ,Medical Instruments & Supplies
+CRL,USD,47738872,NYQ,Diagnostics & Research
+WST,USD,70375762,NYQ,Medical Instruments & Supplies
+NVST,USD,160617709,NYQ,Medical Instruments & Supplies
+TECH,USD,155810652,NMS,Biotechnology
+LSEG.L,GBp,486336617,LSE,Financial Data & Stock Exchanges
+TCAP.L,GBp,725355809,LSE,Capital Markets
+PAY.L,GBp,59786559,LSE,Software - Infrastructure
+V,USD,1704112694,NYQ,Credit Services
+MA,USD,869464115,NYQ,Credit Services
+ICE,USD,561394487,NYQ,Financial Data & Stock Exchanges
+NDAQ,USD,558977372,NMS,Financial Data & Stock Exchanges
+CME,USD,359576125,NMS,Financial Data & Stock Exchanges
+GPN,USD,264618390,NYQ,Specialty Business Services
+FIS,USD,516879151,NYQ,Information Technology Services
+CPAY,USD,65361919,NYQ,Software - Infrastructure
+RTO.L,GBp,2516239885,LSE,Specialty Business Services
+CPG.L,USD,1700313227,LSE,Restaurants
+MER.L,GBp,79262551,LSE,Personal Services
+SRP.L,GBp,977451902,LSE,Specialty Business Services
+PAGE.L,GBp,311363573,LSE,Staffing & Employment Services
+ADP,USD,397262737,NMS,Software - Application
+PAYX,USD,355682860,NMS,Software - Application
+CTAS,USD,400169561,NMS,Specialty Business Services
+JKHY,USD,71050780,NMS,Information Technology Services
+ROL,USD,481145404,NYQ,Personal Services
+UNF,USD,14532908,NYQ,Specialty Business Services
+HCSG,USD,68632202,NMS,Medical Care Facilities
