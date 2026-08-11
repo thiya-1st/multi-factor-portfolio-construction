@@ -13,7 +13,6 @@ Equifax Inc,EFX,US,Large,Information Services,Consumer credit bureau data compar
 FactSet Research Systems,FDS,US,Mid,Information Services,Subscription financial data terminal facing competitive intensity
 Gartner Inc,IT,US,Large,Information Services,Subscription research and advisory with high renewal rates
 TransUnion,TRU,US,Mid,Information Services,Consumer and commercial credit data comparable to Equifax and Experian
-Dun & Bradstreet Holdings,DNB,US,Small,Information Services,Business credit data provider carrying elevated leverage and margin pressure
 Sage Group plc,SGE.L,UK,Large,Software & Technology,SMB accounting and ERP software with subscription switching costs
 Softcat plc,SCT.L,UK,Mid,Software & Technology,IT infrastructure reseller and services with recurring customer relationships
 Computacenter plc,CCC.L,UK,Mid,Software & Technology,IT services and technology reseller with embedded enterprise relationships
@@ -52,7 +51,6 @@ Halma plc,HLMA.L,UK,Large,Asset-Light Industrials,Portfolio of niche safety heal
 Diploma plc,DPLM.L,UK,Large,Asset-Light Industrials,Distributor of specialised technical products with high repeat revenue
 Bunzl plc,BNZL.L,UK,Large,Asset-Light Industrials,Asset-light distribution of consumable business products
 Rotork plc,ROR.L,UK,Mid,Asset-Light Industrials,Flow-control actuators with meaningful aftermarket revenue
-Spectris plc,SXS.L,UK,Mid,Asset-Light Industrials,Precision instrumentation exposed to industrial capex cycles
 Spirax Group plc,SPX.L,UK,Mid,Asset-Light Industrials,Steam and thermal engineering niche leadership with service revenue
 IMI plc,IMI.L,UK,Large,Asset-Light Industrials,Flow-control and process-automation engineering with aftermarket mix
 Croda International,CRDA.L,UK,Mid,Asset-Light Industrials,Specialty chemicals with technical formulation differentiation facing cyclical demand
@@ -68,7 +66,6 @@ Bodycote plc,BOY.L,UK,Small,Specialist B2B & Niche,Thermal-processing services e
 Genus plc,GNS.L,UK,Small,Specialist B2B & Niche,Animal-genetics IP with long reinvestment runway
 DCC plc,DCC.L,UK,Large,Specialist B2B & Niche,Diversified sales marketing and distribution across energy technology and healthcare
 Hill & Smith plc,HILS.L,UK,Mid,Specialist B2B & Niche,Niche infrastructure products manufacturing and distribution
-Treatt plc,TET.L,UK,Small,Specialist B2B & Niche,Specialty flavour and fragrance ingredients with technical differentiation
 Fastenal Co,FAST,US,Large,Specialist B2B & Niche,Industrial fasteners and supplies distribution with vendor-managed-inventory relationships
 MSC Industrial Direct,MSM,US,Mid,Specialist B2B & Niche,Industrial MRO distribution with moderate growth profile
 W.W. Grainger Inc,GWW,US,Large,Specialist B2B & Niche,MRO distribution scale with embedded procurement relationships
@@ -78,7 +75,6 @@ Applied Industrial Technologies,AIT,US,Mid,Specialist B2B & Niche,Industrial par
 Standex International,SXI,US,Small,Specialist B2B & Niche,Diversified niche industrial manufacturing across multiple segments
 Intertek Group plc,ITRK.L,UK,Large,Regulatory Environmental Testing,Global testing inspection and certification with accreditation barriers
 Ricardo plc,RCP.L,UK,Small,Regulatory Environmental Testing,Engineering and environmental consultancy servicing regulated industries
-Renewi plc,RWI.L,UK,Small,Regulatory Environmental Testing,Waste-to-product recycling operator facing margin and regulatory volatility
 Veralto Corp,VLTO,US,Large,Regulatory Environmental Testing,Water-quality and product-testing instruments spun out of Danaher
 Waste Management Inc,WM,US,Large,Regulatory Environmental Testing,Regulatory-barrier waste collection and disposal with pricing power
 Republic Services Inc,RSG,US,Large,Regulatory Environmental Testing,Comparable regulatory-moat waste business to Waste Management
@@ -86,13 +82,12 @@ Clean Harbors Inc,CLH,US,Mid,Regulatory Environmental Testing,Hazardous-waste ha
 Mettler-Toledo International,MTD,US,Large,Regulatory Environmental Testing,Precision instruments for regulated pharma and food industries
 Casella Waste Systems,CWST,US,Mid,Regulatory Environmental Testing,Regional solid-waste operator with regulatory permitting barriers
 Tetra Tech Inc,TTEK,US,Mid,Regulatory Environmental Testing,Environmental and engineering consulting servicing regulated clients
-Montrose Environmental Group,MEG,US,Small,Regulatory Environmental Testing,Environmental testing and remediation services at smaller scale
+Onterris Inc,ONT,US,Small,Regulatory Environmental Testing,Environmental testing and remediation services at smaller scale
 Waste Connections Inc,WCN,US,Large,Regulatory Environmental Testing,Solid-waste operator with regional density and permitting barriers
 Smith & Nephew plc,SN.L,UK,Large,Healthcare & Life Sciences,Medical devices in orthopaedics and wound care with margins lagging US peers
 ConvaTec Group plc,CTEC.L,UK,Mid,Healthcare & Life Sciences,Advanced wound ostomy and continence care consumables with recurring demand
 Spire Healthcare Group,SPI.L,UK,Small,Healthcare & Life Sciences,Private hospital operator with capital-intensive facility economics
 Advanced Medical Solutions,AMS.L,UK,Small,Healthcare & Life Sciences,Wound-care technology and adhesives with technical differentiation
-Alliance Pharma plc,APH.L,UK,Small,Healthcare & Life Sciences,Consumer healthcare brands with moderate scale and mixed portfolio performance
 IQVIA Holdings Inc,IQV,US,Large,Healthcare & Life Sciences,Clinical research and proprietary healthcare data for pharma clients
 Thermo Fisher Scientific,TMO,US,Mega,Healthcare & Life Sciences,Life-science tools and consumables embedded in laboratory workflows
 Danaher Corp,DHR,US,Large,Healthcare & Life Sciences,Diversified life-science and diagnostics tools with disciplined operating model
@@ -104,14 +99,13 @@ Bio-Techne Corp,TECH,US,Mid,Healthcare & Life Sciences,Life-science reagents and
 London Stock Exchange Group,LSEG.L,UK,Large,Payments & Financial Infrastructure,Market infrastructure and data business with network effects
 TP ICAP Group plc,TCAP.L,UK,Small,Payments & Financial Infrastructure,Interdealer broker and market infrastructure with moderate competitive intensity
 PayPoint plc,PAY.L,UK,Small,Payments & Financial Infrastructure,UK payments and retail network infrastructure
-Alpha Group International,ALPH.L,UK,Small,Payments & Financial Infrastructure,FX risk management and international payments services
 Visa Inc,V,US,Mega,Payments & Financial Infrastructure,Global card payments network with high switching costs
 Mastercard Inc,MA,US,Mega,Payments & Financial Infrastructure,Card payments network comparable to Visa
 Intercontinental Exchange,ICE,US,Large,Payments & Financial Infrastructure,Exchanges plus data and mortgage technology with network and regulatory moat
 Nasdaq Inc,NDAQ,US,Large,Payments & Financial Infrastructure,Exchange and market-technology data business comparable to LSEG
 CME Group Inc,CME,US,Large,Payments & Financial Infrastructure,Derivatives exchange with deep network-effect moat
 Global Payments Inc,GPN,US,Mid,Payments & Financial Infrastructure,Merchant payment processing in a more competitively intense segment
-Fiserv Inc,FI,US,Large,Payments & Financial Infrastructure,Payments and fintech infrastructure for banks with high switching costs
+Fiserv Inc,FISV,US,Large,Payments & Financial Infrastructure,Payments and fintech infrastructure for banks with high switching costs
 Fidelity National Information Services,FIS,US,Large,Payments & Financial Infrastructure,Bank and capital-markets technology infrastructure provider
 Corpay Inc,CPAY,US,Mid,Payments & Financial Infrastructure,Corporate payments and expense-management infrastructure
 Rentokil Initial plc,RTO.L,UK,Large,Mission-Critical Services,Pest control and hygiene services with recurring route-density contracts

@@ -69,11 +69,6 @@ TRU,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 TRU,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 TRU,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 TRU,metadata,success,,,,,[],
-DNB,prices,fail,0.0,,,,,empty data returned
-DNB,balance_sheet,fail,0.0,,,,,empty data returned
-DNB,cash_flow,fail,0.0,,,,,empty data returned
-DNB,income_statement,fail,0.0,,,,,empty data returned
-DNB,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 SGE.L,prices,success,1007.0,2022-01-04 00:00:00+00:00,2025-12-30 00:00:00+00:00,0.0,,
 SGE.L,balance_sheet,success,5.0,2021-09-30 00:00:00,2025-09-30 00:00:00,8.0,[],
 SGE.L,cash_flow,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
@@ -264,11 +259,6 @@ ROR.L,balance_sheet,success,5.0,2021-12-31 00:00:00,2025-12-31 00:00:00,9.0,[],
 ROR.L,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 ROR.L,income_statement,success,5.0,2021-12-31 00:00:00,2025-12-31 00:00:00,10.0,[],
 ROR.L,metadata,success,,,,,[],
-SXS.L,prices,fail,0.0,,,,,empty data returned
-SXS.L,balance_sheet,fail,0.0,,,,,empty data returned
-SXS.L,cash_flow,fail,0.0,,,,,empty data returned
-SXS.L,income_statement,fail,0.0,,,,,empty data returned
-SXS.L,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 SPX.L,prices,success,1007.0,2022-01-04 00:00:00+00:00,2025-12-30 00:00:00+00:00,0.0,,
 SPX.L,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 SPX.L,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -344,11 +334,6 @@ HILS.L,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 HILS.L,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 HILS.L,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 HILS.L,metadata,success,,,,,[],
-TET.L,prices,fail,0.0,,,,,empty data returned
-TET.L,balance_sheet,success,5.0,2021-09-30 00:00:00,2025-09-30 00:00:00,8.0,[],
-TET.L,cash_flow,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
-TET.L,income_statement,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
-TET.L,metadata,success,,,,,[],
 FAST,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
 FAST,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 FAST,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -394,11 +379,6 @@ RCP.L,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,"['C
 RCP.L,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,"['Depreciation And Amortization', 'Stock Based Compensation']",
 RCP.L,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,"['Gross Profit', 'Operating Income', 'EBIT', 'EBITDA']",
 RCP.L,metadata,success,,,,,[],
-RWI.L,prices,fail,0.0,,,,,empty data returned
-RWI.L,balance_sheet,fail,0.0,,,,,empty data returned
-RWI.L,cash_flow,fail,0.0,,,,,empty data returned
-RWI.L,income_statement,fail,0.0,,,,,empty data returned
-RWI.L,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 VLTO,prices,success,562.0,2023-10-04 00:00:00-04:00,2025-12-30 00:00:00-05:00,0.0,,
 VLTO,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,4.0,[],
 VLTO,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -434,11 +414,6 @@ TTEK,balance_sheet,success,5.0,2021-09-30 00:00:00,2025-09-30 00:00:00,9.0,[],
 TTEK,cash_flow,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
 TTEK,income_statement,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
 TTEK,metadata,success,,,,,[],
-MEG,prices,fail,0.0,,,,,empty data returned
-MEG,balance_sheet,fail,0.0,,,,,empty data returned
-MEG,cash_flow,fail,0.0,,,,,empty data returned
-MEG,income_statement,fail,0.0,,,,,empty data returned
-MEG,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 WCN,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
 WCN,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 WCN,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -464,11 +439,6 @@ AMS.L,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,2.0,[],
 AMS.L,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 AMS.L,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 AMS.L,metadata,success,,,,,[],
-APH.L,prices,fail,0.0,,,,,empty data returned
-APH.L,balance_sheet,fail,0.0,,,,,empty data returned
-APH.L,cash_flow,fail,0.0,,,,,empty data returned
-APH.L,income_statement,fail,0.0,,,,,empty data returned
-APH.L,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 IQV,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
 IQV,balance_sheet,success,5.0,2021-12-31 00:00:00,2025-12-31 00:00:00,7.0,[],
 IQV,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -524,11 +494,6 @@ PAY.L,balance_sheet,success,4.0,2023-03-31 00:00:00,2026-03-31 00:00:00,0.0,[],
 PAY.L,cash_flow,success,4.0,2023-03-31 00:00:00,2026-03-31 00:00:00,0.0,[],
 PAY.L,income_statement,success,4.0,2023-03-31 00:00:00,2026-03-31 00:00:00,0.0,[],
 PAY.L,metadata,success,,,,,[],
-ALPH.L,prices,fail,0.0,,,,,empty data returned
-ALPH.L,balance_sheet,fail,0.0,,,,,empty data returned
-ALPH.L,cash_flow,fail,0.0,,,,,empty data returned
-ALPH.L,income_statement,fail,0.0,,,,,empty data returned
-ALPH.L,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 V,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
 V,balance_sheet,success,5.0,2021-09-30 00:00:00,2025-09-30 00:00:00,8.0,[],
 V,cash_flow,success,4.0,2022-09-30 00:00:00,2025-09-30 00:00:00,0.0,[],
@@ -559,11 +524,6 @@ GPN,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 GPN,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 GPN,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 GPN,metadata,success,,,,,[],
-FI,prices,fail,0.0,,,,,empty data returned
-FI,balance_sheet,fail,0.0,,,,,empty data returned
-FI,cash_flow,fail,0.0,,,,,empty data returned
-FI,income_statement,fail,0.0,,,,,empty data returned
-FI,metadata,fail,,,,,"['currency', 'sharesOutstanding', 'exchange', 'industry']",
 FIS,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
 FIS,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 FIS,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
@@ -634,3 +594,23 @@ HCSG,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,2.0,['Lon
 HCSG,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 HCSG,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
 HCSG,metadata,success,,,,,[],
+ONT,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
+ONT,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,metadata,success,,,,,[],
+FISV,prices,success,1001.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
+FISV,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,metadata,success,,,,,['industry'],
+ONT,prices,success,1002.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
+ONT,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+ONT,metadata,success,,,,,[],
+FISV,prices,success,1001.0,2022-01-03 00:00:00-05:00,2025-12-30 00:00:00-05:00,0.0,,
+FISV,balance_sheet,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,cash_flow,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,income_statement,success,4.0,2022-12-31 00:00:00,2025-12-31 00:00:00,0.0,[],
+FISV,metadata,success,,,,,['industry'],
