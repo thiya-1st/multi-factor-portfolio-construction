@@ -4,6 +4,8 @@ import pandas as pd
 START_DATE = "2022-01-01"
 END_DATE = "2025-12-31"
 
+
+PRICE_SEARCH_THRESHOLD_DAYS = 5  # max trading days to search backward for a valid price
 REBALANCE_FREQ = "QS" # quarterly
 MOMENTUM_MIN_HISTORY_MONTHS = 12  # longest lookback needed (12-1 month momentum)
 
