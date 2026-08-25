@@ -7,7 +7,7 @@ def calculate_momentum(prices, snapshot_date, lookback_months, skip_num_months):
     pd_date = pd.Timestamp(snapshot_date)
 
     current_price = None
-    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS):
+    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS): #TODO: make into function if possible
         current_date = pd_date - pd.DateOffset(months = skip_num_months) - pd.Timedelta(days = i)
         try:
             current_price = prices.loc[current_date, "Adj Close"]
@@ -16,7 +16,7 @@ def calculate_momentum(prices, snapshot_date, lookback_months, skip_num_months):
             pass
 
     past_price = None
-    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS):
+    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS): #TODO: function
         past_date = pd_date - pd.DateOffset(months = lookback_months) - pd.Timedelta(days = i)
         try:
             past_price = prices.loc[past_date, "Adj Close"]
@@ -31,14 +31,14 @@ def calculate_momentum(prices, snapshot_date, lookback_months, skip_num_months):
 
 def build_momentum_table(universe):
     momentum_table = []
-    missing_prices_log = []
+    missing_files_log = []
     nan_log = []
 
     for ticker in universe["Ticker"]:
         try:
-            prices = pd.read_csv(f"../data/raw/prices/{ticker}.csv", index_col = "Date") ##TODO: add ../
+            prices = pd.read_csv(f"../data/raw/prices/{ticker}.csv", index_col = "Date") 
         except:
-            missing_prices_log.append({"ticker": ticker, "missing_file": "prices"})
+            missing_files_log.append({"ticker": ticker, "missing_file": "prices"})
             continue
 
         prices.index = pd.to_datetime(prices.index.astype(str).str[:10])
@@ -63,5 +63,5 @@ def build_momentum_table(universe):
                 "momentum_6": momentum_6,
                 "momentum_3": momentum_3
             })
-
-    return pd.DataFrame(momentum_table), pd.DataFrame(missing_prices_log), pd.DataFrame(nan_log)
+    #TODO: check if we need logs
+    return pd.DataFrame(momentum_table), pd.DataFrame(missing_files_log), pd.DataFrame(nan_log)
