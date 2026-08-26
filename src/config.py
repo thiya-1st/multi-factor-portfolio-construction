@@ -1,17 +1,21 @@
-# Date range for price collection.
-# Originally set to 2021-01-01, but shrunk to 2022-01-01 after the collection log 
-# showed most companies' fundamentals only reliably cover ~4 years via yfinance. 
-# The price window was aligned to match, so every period with price data also has 
-# corresponding fundamentals to score against.
+import pandas as pd
 
+# Price data collection window
 START_DATE = "2022-01-01"
 END_DATE = "2025-12-31"
 
-# Required fields for each fundamental statement type (cash flow, balance sheet, 
-# income statement), a fixed list of required line items is defined below. These 
-# are the specific metrics needed for factor scoring later. Not every company 
-# reports every field — availability is checked and logged per company rather than 
-# assumed.
+FUNDAMENTALS_LAG_DAYS = 90  
+FUNDAMENTALS_MAX_STALENESS_MONTHS = 15
+
+PRICE_SEARCH_THRESHOLD_DAYS = 5  # max trading days to search backward for a valid price
+MOMENTUM_MIN_HISTORY_MONTHS = 12  # longest lookback needed (12-1 month momentum)
+
+REBALANCE_FREQ = "QS" # quarterly
+REBALANCE_START_DATE = pd.Timestamp(START_DATE) + pd.DateOffset(months = MOMENTUM_MIN_HISTORY_MONTHS)
+REBALANCE_DATES = pd.date_range(start=REBALANCE_START_DATE, end=END_DATE, freq=REBALANCE_FREQ)
+
+FLAT_US_TAX_RATE_FALLBACK = 0.21
+FLAT_UK_TAX_RATE_FALLBACK = 0.25
 
 BALANCE_SHEET_REQUIRED_FIELDS = [
     "Cash And Cash Equivalents",
