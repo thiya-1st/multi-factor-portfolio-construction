@@ -6,6 +6,15 @@ import numpy as np
 def get_latest_fundamental_period(fundamentals, date):
     pass
 
+def isnone(latest_fundamental_periods, metrics):
+    for period in latest_fundamental_periods:
+        if period is None:
+            return True
+    for metric in metrics:
+        if pd.isna(metric):
+            return True
+    return False
+
 def calculate_roic(
         ebit,
         total_debt,
