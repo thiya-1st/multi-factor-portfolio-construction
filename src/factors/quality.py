@@ -6,7 +6,7 @@ import numpy as np
 def get_latest_fundamental_period(fundamentals, date):
     pass
 
-def isnone(latest_fundamental_periods, metrics):
+def has_missing_data(latest_fundamental_periods, metrics):
     for period in latest_fundamental_periods:
         if period is None:
             return True
@@ -26,10 +26,7 @@ def calculate_roic(
         latest_income_statement_period,
         ticker_country
     ):
-    if latest_income_statement_period is None or latest_balance_sheet_period is None:
-        return np.nan
-
-    if pd.isna(ebit) or pd.isna(total_debt) or pd.isna(equity) or pd.isna(cash):
+    if has_missing_data([latest_income_statement_period, latest_balance_sheet_period], [ebit, total_debt, equity, cash]):
         return np.nan
 
     if not pd.isna(tax_provision) and not pd.isna(pretax_income):
@@ -45,21 +42,15 @@ def calculate_roic(
     return nopat / invested_capital #TODO: check if dividing by 0
 
 def calculate_gross_margin(gross_profit, total_revenue, latest_income_statement_period):
-    if latest_income_statement_period is None:
-        return np.nan
-
-    if pd.isna(gross_profit) or pd.isna(total_revenue):
+    if has_missing_data([latest_income_statement_period], [gross_profit, total_revenue]):
         return np.nan
 
     return gross_profit / total_revenue #TODO: check divide by 0
 
 def calculate_operating_margin(ebit, total_revenue, latest_income_statement_period):
-    if latest_income_statement_period is None:
+    if has_missing_data([latest_income_statement_period], [ebit, total_revenue]):
         return np.nan
-
-    if pd.isna(ebit) or pd.isna(total_revenue):
-        return np.nan
-
+    
     return ebit / total_revenue #TODO: check divide by 0
 
 def build_quality_table(universe):
