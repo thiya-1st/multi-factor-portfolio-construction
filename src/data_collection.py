@@ -21,6 +21,8 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
         else:
             prices.to_csv(f"{config.PRICES_SAVE_DIR}/{ticker}.csv")
             missing_values = prices.isna().sum().sum()
+            total_values = prices.shape[0] * prices.shape[1]
+            missing_values_pct = missing_values/total_values * 100
             log_entry = {
                 "ticker": ticker, 
                 "data_type": "prices",
@@ -28,7 +30,7 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
                 "rows": len(prices),
                 "start_date": prices.index.min(),
                 "end_date": prices.index.max(),
-                "missing_values": missing_values,
+                "missing_values_pct": missing_values_pct,
                 "missing_required_fields": None,
                 "error": None
             }
@@ -78,6 +80,8 @@ def collect_fundamentals(
             cleaned_statement.to_csv(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}/{fundamental_type}.csv")
 
             missing_values = cleaned_statement.isna().sum().sum()
+            total_values = cleaned_statement.shape[0]*cleaned_statement.shape[1]
+            missing_values_pct = missing_values/total_values * 100
             missing_fields = [field for field in required_fields if field not in cleaned_statement.index]
 
             log_entry = {
@@ -87,7 +91,7 @@ def collect_fundamentals(
                 "rows": cleaned_statement.shape[1],
                 "start_date": cleaned_statement.columns.min(),
                 "end_date": cleaned_statement.columns.max(),
-                "missing_values": missing_values,
+                "missing_values_pct": missing_values_pct,
                 "missing_required_fields": missing_fields,
                 "error": None
             }
@@ -133,7 +137,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "rows": len(config.METADATA_REQUIRED_FIELDS) - len(missing_fields),
             "start_date": None,
             "end_date": None,
-            "missing_values": None,
+            "missing_values_pct": None,
             "missing_required_fields": missing_fields,
             "error": None
         }
@@ -178,7 +182,7 @@ def get_exception_log(ticker: str,e: Exception, data_type: str) -> dict:
         "rows": 0,
         "start_date": None,
         "end_date": None,
-        "missing_values": None,
+        "missing_values_pct": None,
         "missing_required_fields": None,
         "error": str(e)
     }
@@ -191,7 +195,7 @@ def get_empty_log(ticker: str, data_type: str) -> dict:
         "rows": 0,
         "start_date": None,
         "end_date": None,
-        "missing_values": None,
+        "missing_values_pct": None,
         "missing_required_fields": None,
         "error": "empty data returned"
     }
