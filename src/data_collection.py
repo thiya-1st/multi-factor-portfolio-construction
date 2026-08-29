@@ -136,7 +136,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
         info = ticker_object.info
 
         field_values = {field: info.get(field) for field in config.METADATA_REQUIRED_FIELDS}
-        missing_fields = [field for field, value in field_values.items() if value is None]
+        missing_fields = [field for field, value in field_values.items() if value is None] #TO DO: CHECK
 
         if len(missing_fields) == len(config.METADATA_REQUIRED_FIELDS):
             status = "fail"
@@ -150,7 +150,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "ticker": ticker, 
             "data_type": "metadata",
             "status": status,
-            "rows": 0 ,
+            "rows": len(config.METADATA_REQUIRED_FIELDS) - len(missing_fields),
             "start_date": None,
             "end_date": None,
             "missing_values": None,
