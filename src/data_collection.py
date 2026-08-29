@@ -17,17 +17,7 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
     try:
         prices = ticker_object.history(start = config.START_DATE, end = config.END_DATE, auto_adjust = False)
         if prices.empty:
-            log_entry = {
-                "ticker": ticker, 
-                "data_type": "prices",
-                "status": "fail",
-                "rows": 0,
-                "start_date": None,
-                "end_date": None,
-                "missing_values": None,
-                "missing_required_fields": None,
-                "error": "empty data returned"
-            }
+            log_entry = get_empty_log(ticker, "prices")
         else:
             prices.to_csv(f"{config.PRICES_SAVE_DIR}/{ticker}.csv")
             missing_values = prices.isna().sum().sum()
@@ -43,17 +33,7 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
                 "error": None
             }
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": "prices",
-            "status": "fail",
-            "rows": 0,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+       log_entry = get_exception_log (ticker, e, "prices")
     return log_entry
 
 def collect_fundamentals(
@@ -91,17 +71,7 @@ def collect_fundamentals(
         filtered_statement = fundamental_statement.loc[available_fields]
 
         if filtered_statement.empty:
-            log_entry = {
-                "ticker": ticker, 
-                "data_type": fundamental_type,
-                "status": "fail",
-                "rows": 0,
-                "start_date": None,
-                "end_date": None,
-                "missing_values": None,
-                "missing_required_fields": None,
-                "error": "empty data returned"
-            }
+            log_entry = get_empty_log(ticker, fundamental_type)
         else:
             os.makedirs(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}", exist_ok = True)
             cleaned_statement = filtered_statement.dropna(axis = 1, how = "all")
@@ -123,17 +93,7 @@ def collect_fundamentals(
             }
 
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": fundamental_type,
-            "status": "fail",
-            "rows": 0,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+        log_entry = get_exception_log (ticker, e, fundamental_type)
 
     return log_entry
 
@@ -156,7 +116,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
         info = ticker_object.info
 
         field_values = {field: info.get(field) for field in config.METADATA_REQUIRED_FIELDS}
-        missing_fields = [field for field, value in field_values.items() if value is None]
+        missing_fields = [field for field, value in field_values.items() if value is None] #TO DO: CHECK
 
         if len(missing_fields) == len(config.METADATA_REQUIRED_FIELDS):
             status = "fail"
@@ -170,7 +130,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "ticker": ticker, 
             "data_type": "metadata",
             "status": status,
-            "rows": None,
+            "rows": len(config.METADATA_REQUIRED_FIELDS) - len(missing_fields),
             "start_date": None,
             "end_date": None,
             "missing_values": None,
@@ -178,17 +138,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "error": None
         }
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": "metadata",
-            "status": "fail",
-            "rows": None,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+        log_entry = get_exception_log (ticker, e, "metadata")
 
     return log_entry, metadata_entry
 
@@ -217,5 +167,32 @@ def collect_all_data(ticker: str) -> tuple[list[dict], dict | None]:
     metadata_log, metadata_entry = collect_metadata(ticker, ticker_object)
 
     ticker_logs.extend([price_log, balance_sheet_log, cash_flow_log, income_statement_log, metadata_log])
-    
+
     return ticker_logs, metadata_entry
+
+def get_exception_log(ticker: str,e: Exception, data_type: str) -> dict:
+    return {
+        "ticker": ticker, 
+        "data_type": data_type,
+        "status": "fail",
+        "rows": 0,
+        "start_date": None,
+        "end_date": None,
+        "missing_values": None,
+        "missing_required_fields": None,
+        "error": str(e)
+    }
+
+def get_empty_log(ticker: str, data_type: str) -> dict:
+    return {
+        "ticker": ticker, 
+        "data_type": data_type,
+        "status": "fail",
+        "rows": 0,
+        "start_date": None,
+        "end_date": None,
+        "missing_values": None,
+        "missing_required_fields": None,
+        "error": "empty data returned"
+    }
+        
