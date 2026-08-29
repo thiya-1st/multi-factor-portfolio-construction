@@ -43,17 +43,7 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
                 "error": None
             }
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": "prices",
-            "status": "fail",
-            "rows": 0,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+       log_entry = get_exception_log (ticker, e, "prices")
     return log_entry
 
 def collect_fundamentals(
@@ -123,17 +113,7 @@ def collect_fundamentals(
             }
 
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": fundamental_type,
-            "status": "fail",
-            "rows": 0,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+        log_entry = get_exception_log (ticker, e, fundamental_type)
 
     return log_entry
 
@@ -170,7 +150,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "ticker": ticker, 
             "data_type": "metadata",
             "status": status,
-            "rows": None,
+            "rows": 0 ,
             "start_date": None,
             "end_date": None,
             "missing_values": None,
@@ -178,17 +158,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "error": None
         }
     except Exception as e:
-        log_entry = {
-            "ticker": ticker, 
-            "data_type": "metadata",
-            "status": "fail",
-            "rows": None,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+        log_entry = get_exception_log (ticker, e, "metadata")
 
     return log_entry, metadata_entry
 
@@ -217,5 +187,19 @@ def collect_all_data(ticker: str) -> tuple[list[dict], dict | None]:
     metadata_log, metadata_entry = collect_metadata(ticker, ticker_object)
 
     ticker_logs.extend([price_log, balance_sheet_log, cash_flow_log, income_statement_log, metadata_log])
-    
+
     return ticker_logs, metadata_entry
+
+def get_exception_log(ticker: str,e: Exception, data_type: str) -> dict:
+        return {
+            "ticker": ticker, 
+            "data_type": data_type,
+            "status": "fail",
+            "rows": 0,
+            "start_date": None,
+            "end_date": None,
+            "missing_values": None,
+            "missing_required_fields": None,
+            "error": str(e)
+        }
+        
