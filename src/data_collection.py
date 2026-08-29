@@ -17,17 +17,7 @@ def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
     try:
         prices = ticker_object.history(start = config.START_DATE, end = config.END_DATE, auto_adjust = False)
         if prices.empty:
-            log_entry = {
-                "ticker": ticker, 
-                "data_type": "prices",
-                "status": "fail",
-                "rows": 0,
-                "start_date": None,
-                "end_date": None,
-                "missing_values": None,
-                "missing_required_fields": None,
-                "error": "empty data returned"
-            }
+            log_entry = get_empty_log(ticker, "prices")
         else:
             prices.to_csv(f"{config.PRICES_SAVE_DIR}/{ticker}.csv")
             missing_values = prices.isna().sum().sum()
@@ -81,17 +71,7 @@ def collect_fundamentals(
         filtered_statement = fundamental_statement.loc[available_fields]
 
         if filtered_statement.empty:
-            log_entry = {
-                "ticker": ticker, 
-                "data_type": fundamental_type,
-                "status": "fail",
-                "rows": 0,
-                "start_date": None,
-                "end_date": None,
-                "missing_values": None,
-                "missing_required_fields": None,
-                "error": "empty data returned"
-            }
+            log_entry = get_empty_log(ticker, fundamental_type)
         else:
             os.makedirs(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}", exist_ok = True)
             cleaned_statement = filtered_statement.dropna(axis = 1, how = "all")
@@ -191,15 +171,28 @@ def collect_all_data(ticker: str) -> tuple[list[dict], dict | None]:
     return ticker_logs, metadata_entry
 
 def get_exception_log(ticker: str,e: Exception, data_type: str) -> dict:
-        return {
-            "ticker": ticker, 
-            "data_type": data_type,
-            "status": "fail",
-            "rows": 0,
-            "start_date": None,
-            "end_date": None,
-            "missing_values": None,
-            "missing_required_fields": None,
-            "error": str(e)
-        }
+    return {
+        "ticker": ticker, 
+        "data_type": data_type,
+        "status": "fail",
+        "rows": 0,
+        "start_date": None,
+        "end_date": None,
+        "missing_values": None,
+        "missing_required_fields": None,
+        "error": str(e)
+    }
+
+def get_empty_log(ticker: str, data_type: str) -> dict:
+    return {
+        "ticker": ticker, 
+        "data_type": data_type,
+        "status": "fail",
+        "rows": 0,
+        "start_date": None,
+        "end_date": None,
+        "missing_values": None,
+        "missing_required_fields": None,
+        "error": "empty data returned"
+    }
         
