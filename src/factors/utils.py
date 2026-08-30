@@ -2,6 +2,13 @@ from src import config
 
 import pandas as pd
 
+def load_file(ticker, missing_files, file_name, file_path):
+    try:
+        return pd.read_csv(file_path, index_col = 0)
+    except FileNotFoundError:
+        missing_files.append({"ticker": ticker, "missing_file": file_name})
+        return None
+
 def get_latest_fundamental_period(fundamental_statement, date):
     period_dates = pd.Series(pd.to_datetime(fundamental_statement.columns), index = fundamental_statement.columns)
 
@@ -14,6 +21,9 @@ def get_latest_fundamental_period(fundamental_statement, date):
         return None
     
     return valid_dates.idxmax()
+
+def get_latest_price_date(prices, date):
+    pass
 
 def has_missing_data(metrics):
     return any(pd.isna(m) for m in metrics)

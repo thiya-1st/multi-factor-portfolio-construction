@@ -43,8 +43,6 @@ def build_value_table(universe):
             latest_price_date = get_latest_price_date(prices, date)
             #TODO: log if periods are different and check if fine
 
-
-
             price_adj_close = prices.loc[latest_price_date, "Adj Close"]
 
             earnings_per_share = income_statement.loc["EPS", latest_income_statement_period]
