@@ -1,22 +1,11 @@
 from src import config
+from src.factors.utils import get_latest_fundamental_period, has_missing_data
 
 import pandas as pd
 import numpy as np
 
-def get_latest_fundamental_period(fundamentals, date):
-    pass
-
 def get_latest_price_date(prices, date):
     pass
-
-def has_missing_data(latest_fundamental_periods, metrics):
-    for period in latest_fundamental_periods:
-        if period is None:
-            return True
-    for metric in metrics:
-        if pd.isna(metric):
-            return True
-    return False #going to put it into a repeated file later
 
 def build_value_table(universe):
     value_table = []
