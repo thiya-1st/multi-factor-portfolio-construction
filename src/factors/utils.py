@@ -23,7 +23,15 @@ def get_latest_fundamental_period(fundamental_statement, date):
     return valid_dates.idxmax()
 
 def get_latest_price_date(prices, date):
-    pass
+    prices_dates = pd.Series(pd.to_datetime(prices.index), index = prices.index)
+
+    recent_dates = (prices_dates + pd.Timedelta(days = config.PRICE_SEARCH_THRESHOLD_DAYS)) >= date
+
+    if recent_dates.empty:
+        return None
+
+    return recent_dates.idxmax()
+
 
 def has_missing_data(metrics):
     return any(pd.isna(m) for m in metrics)

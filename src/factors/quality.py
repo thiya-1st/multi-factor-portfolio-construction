@@ -41,7 +41,7 @@ def calculate_gross_margin(gross_profit, total_revenue):
 def calculate_operating_margin(ebit, total_revenue):
 
     if has_missing_data([ebit, total_revenue]) or total_revenue == 0:
-        return np.nan
+        return np.nan #TODO: do i need logs
     
     return ebit / total_revenue 
 
