@@ -1,37 +1,29 @@
 from src import config
+from src.factors.utils import get_latest_price_date
 
 import pandas as pd
 import numpy as np
 
-def calculate_momentum(prices, snapshot_date, lookback_months, skip_num_months):
-    pd_date = pd.Timestamp(snapshot_date)
-
-    current_price = None
-    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS): #TODO: make into function if possible
-        current_date = pd_date - pd.DateOffset(months = skip_num_months) - pd.Timedelta(days = i)
+def get_adj_close_price(prices, date):
+    if date is not None:
         try:
-            current_price = prices.loc[current_date, "Adj Close"]
-            break
-        except KeyError:
-            pass
+            return prices.loc[date, "Adj Close"]
+        except:
+            return None
 
-    past_price = None
-    for i in range(config.PRICE_SEARCH_THRESHOLD_DAYS): #TODO: function
-        past_date = pd_date - pd.DateOffset(months = lookback_months) - pd.Timedelta(days = i)
-        try:
-            past_price = prices.loc[past_date, "Adj Close"]
-            break
-        except KeyError:
-            pass
+def calculate_momentum(prices, date, lookback_months, skip_num_months):
+    current_date = get_latest_price_date(prices, date) #TODO change date to date - skipmonths
+    current_price = get_adj_close_price(prices, current_date)
+
+    past_date = get_latest_price_date(prices, date) #TODO change date to date - lookbackmonths
+    past_price = get_adj_close_price(prices, past_date)
 
     if current_price is None or past_price is None:
         return np.nan
-    else:
-        return current_price / past_price - 1
+    return current_price / past_price - 1
 
 def build_momentum_table(ticker, date, prices, latest_price_date, momentum_table):
     momentum_table = []
-    missing_files_log = []
     nan_log = []
 
     prices.index = pd.to_datetime(prices.index.astype(str).str[:10])
