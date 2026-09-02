@@ -10,6 +10,7 @@ def load_file(ticker, missing_files, file_name, file_path):
         return None
 
 def get_latest_fundamental_period(fundamental_statement, date):
+    date = pd.Timestamp(date)
     period_dates = pd.Series(pd.to_datetime(fundamental_statement.columns), index = fundamental_statement.columns)
 
     known_dates = (period_dates + pd.Timedelta(days = config.FUNDAMENTALS_LAG_DAYS)) <= date
@@ -23,6 +24,7 @@ def get_latest_fundamental_period(fundamental_statement, date):
     return valid_dates.idxmax()
 
 def get_latest_price_date(prices, date):
+    date = pd.Timestamp(date)
     prices_dates = pd.Series(pd.to_datetime(prices.index), index = prices.index)
 
     not_future_dates = prices_dates <= date
