@@ -36,7 +36,7 @@ def build_value_table(
         latest_income_statement_period,
         latest_cash_flow_period,
         latest_price_date,
-        values_table
+        value_table
     ):
 
     if latest_income_statement_period is not None:
@@ -76,7 +76,7 @@ def build_value_table(
     free_cash_flow_yield = calculate_fcf_yield(operating_cash_flow, capital_expenditure, market_cap)
     earnings_yield = calculate_earnings_yield(market_cap, net_income)
 
-    values_table.append({
+    value_table.append({
         "ticker": ticker,
         "date": date,
         "ev_ebitda": ev_ebitda,
