@@ -76,7 +76,8 @@ def collect_fundamentals(
             log_entry = get_empty_log(ticker, fundamental_type)
         else:
             os.makedirs(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}", exist_ok = True)
-            cleaned_statement = filtered_statement.dropna(axis = 1, how = "all")
+            cleaned_statement = deleting_column(filtered_statement, fundamental_type, available_fields)
+
             cleaned_statement.to_csv(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}/{fundamental_type}.csv")
 
             missing_values = cleaned_statement.isna().sum().sum()
@@ -198,5 +199,10 @@ def get_empty_log(ticker: str, data_type: str) -> dict:
         "missing_values_pct": None,
         "missing_required_fields": None,
         "error": "empty data returned"
-    }
-        
+    }  
+
+def deleting_column(filtered_statement, fundamental_type, available_fields):
+    threshold_count = int(len(available_fields) * config.MISSING_DATA_THRESHOLD_PCT)
+    cleaned_statement = filtered_statement.dropna(axis = 1, thresh = threshold_count)
+    return cleaned_statement
+    
