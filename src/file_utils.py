@@ -1,8 +1,7 @@
 import pandas as pd
 
-def load_file(ticker, missing_files, file_name, file_path):
+def load_file(file_path, index_col = 0):
     try:
-        return pd.read_csv(file_path, index_col = 0)
+        return pd.read_csv(file_path, index_col = index_col)
     except FileNotFoundError:
-        missing_files.append({"ticker": ticker, "missing_file": file_name})
         return None
