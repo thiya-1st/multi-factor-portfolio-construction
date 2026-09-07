@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 
 # Price data collection window
 START_DATE = "2022-01-01"
@@ -59,5 +60,7 @@ METADATA_REQUIRED_FIELDS = [
     "industry"
 ]
 
-PRICES_SAVE_DIR = "../data/raw/prices"
-FUNDAMENTALS_SAVE_DIR = "../data/raw/fundamentals"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PRICES_SAVE_DIR = PROJECT_ROOT / "data" / "raw" / "prices"
+FUNDAMENTALS_SAVE_DIR = PROJECT_ROOT / "data" / "raw" / "fundamentals"
+RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
