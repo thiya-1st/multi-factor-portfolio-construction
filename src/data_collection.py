@@ -76,7 +76,7 @@ def collect_fundamentals(
             log_entry = get_empty_log(ticker, fundamental_type)
         else:
             os.makedirs(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}", exist_ok = True)
-            cleaned_statement = deleting_column(filtered_statement, fundamental_type, available_fields)
+            cleaned_statement = deleting_column(filtered_statement, available_fields)
 
             cleaned_statement.to_csv(f"{config.FUNDAMENTALS_SAVE_DIR}/{ticker}/{fundamental_type}.csv")
 
@@ -143,7 +143,7 @@ def collect_metadata(ticker: str, ticker_object: yf.Ticker) -> tuple[dict, dict 
             "error": None
         }
     except Exception as e:
-        log_entry = get_exception_log (ticker, e, "metadata")
+        log_entry = get_exception_log(ticker, e, "metadata")
 
     return log_entry, metadata_entry
 
@@ -161,9 +161,12 @@ def collect_all_data(ticker: str) -> tuple[list[dict], dict | None]:
         statement, metadata). metadata_entry is a dict of this ticker's 
         metadata if available, otherwise None.
     """
+    try:
+        ticker_object = yf.Ticker(ticker)
+    except Exception as e:
+        return get_exception_log(ticker, e, "ticker object"), None
 
     ticker_logs = []
-    ticker_object = yf.Ticker(ticker)
 
     price_log = collect_prices(ticker, ticker_object)
     balance_sheet_log = collect_fundamentals(ticker, ticker_object, "balance_sheet", config.BALANCE_SHEET_REQUIRED_FIELDS)
@@ -201,7 +204,7 @@ def get_empty_log(ticker: str, data_type: str) -> dict:
         "error": "empty data returned"
     }  
 
-def deleting_column(filtered_statement, fundamental_type, available_fields):
+def deleting_column(filtered_statement, available_fields):
     threshold_count = int(len(available_fields) * config.MISSING_DATA_THRESHOLD_PCT)
     cleaned_statement = filtered_statement.dropna(axis = 1, thresh = threshold_count)
     return cleaned_statement
