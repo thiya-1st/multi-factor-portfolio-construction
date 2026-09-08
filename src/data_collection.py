@@ -165,7 +165,7 @@ def collect_all_data(ticker: str) -> tuple[list[dict], dict | None]:
     try:
         ticker_object = yf.Ticker(ticker)
     except Exception as e:
-        return get_exception_log(ticker, e, "ticker object"), None
+        return [get_exception_log(ticker, e, "ticker object")], None
 
     ticker_logs = []
 
