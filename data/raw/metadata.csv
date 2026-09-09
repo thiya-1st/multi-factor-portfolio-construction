@@ -18,7 +18,6 @@ SCT.L,currency,sharesOutstanding,exchange,industry
 CCC.L,currency,sharesOutstanding,exchange,industry
 BYIT.L,currency,sharesOutstanding,exchange,industry
 NCC.L,currency,sharesOutstanding,exchange,industry
-TRST.L,currency,sharesOutstanding,exchange,industry
 MSFT,currency,sharesOutstanding,exchange,industry
 ADBE,currency,sharesOutstanding,exchange,industry
 INTU,currency,sharesOutstanding,exchange,industry
@@ -74,7 +73,6 @@ WTS,currency,sharesOutstanding,exchange,industry
 AIT,currency,sharesOutstanding,exchange,industry
 SXI,currency,sharesOutstanding,exchange,industry
 ITRK.L,currency,sharesOutstanding,exchange,industry
-RCP.L,currency,sharesOutstanding,exchange,industry
 VLTO,currency,sharesOutstanding,exchange,industry
 WM,currency,sharesOutstanding,exchange,industry
 RSG,currency,sharesOutstanding,exchange,industry

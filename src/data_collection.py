@@ -1,6 +1,8 @@
-import os
 import yfinance as yf
 from src import config
+from src.file_utils import load_file
+import shutil
+import pandas as pd
 
 def collect_prices(ticker: str, ticker_object: yf.Ticker) -> dict:
     """
@@ -209,4 +211,43 @@ def deleting_column(filtered_statement, available_fields):
     threshold_count = int(len(available_fields) * config.MISSING_DATA_THRESHOLD_PCT)
     cleaned_statement = filtered_statement.dropna(axis = 1, thresh = threshold_count)
     return cleaned_statement
-    
+
+def remove_tickers(tickers):
+    existing_log = load_file(config.RAW_DATA_DIR / "collection_log.csv", index_col = None)
+    updated_log = existing_log[~existing_log["ticker"].isin(tickers)] 
+    updated_log.to_csv(config.RAW_DATA_DIR / "collection_log.csv", index = False)
+
+    existing_metadata = load_file(config.RAW_DATA_DIR / "metadata.csv", index_col = None)
+    updated_metadata = existing_metadata[~existing_metadata["ticker"].isin(tickers)] 
+    updated_metadata.to_csv(config.RAW_DATA_DIR / "metadata.csv", index = False)
+
+    for ticker in tickers:
+        price_file = config.RAW_DATA_DIR / "prices" / f"{ticker}.csv"
+        price_file.unlink(missing_ok = True)
+
+        fundamentals_folder = config.RAW_DATA_DIR / "fundamentals" / ticker
+        if fundamentals_folder.exists():
+            shutil.rmtree(fundamentals_folder)
+
+def add_tickers(new_tickers):
+    log_entries = []
+    metadata_entries = []
+
+    existing_log = load_file(config.RAW_DATA_DIR / "collection_log.csv", index_col = None)
+    existing_metadata = load_file(config.RAW_DATA_DIR / "metadata.csv", index_col = None)
+    new_tickers = [t for t in new_tickers if t not in existing_log["ticker"].values]
+
+    for ticker in new_tickers:
+        ticker_logs, metadata_entry = collect_all_data(ticker)
+
+        if metadata_entry is not None:
+            metadata_entries.append(metadata_entry)
+        log_entries.extend(ticker_logs)
+
+    new_log = pd.DataFrame(log_entries)
+    updated_log = pd.concat([existing_log, new_log], ignore_index = True) 
+    updated_log.to_csv(config.RAW_DATA_DIR / "collection_log.csv", index = False)
+
+    new_metadata = pd.DataFrame(metadata_entries)
+    updated_metadata = pd.concat([existing_metadata, new_metadata], ignore_index = True)
+    updated_metadata.to_csv(config.RAW_DATA_DIR / "metadata.csv", index = False)
