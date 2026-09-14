@@ -39,3 +39,8 @@ def get_adj_close_price(prices, date):
 
 def has_missing_data(metrics):
     return any(pd.isna(m) for m in metrics)
+
+def datetime_to_string(dt):
+    if dt is None:
+        return None
+    return dt.strftime("%Y-%m-%d")
