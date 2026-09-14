@@ -1,10 +1,10 @@
 from src import config
 
 import pandas as pd
+import numpy as np
 
 def get_latest_fundamental_period(fundamental_statement, date):
-    date = pd.Timestamp(date)
-    period_dates = pd.Series(pd.to_datetime(fundamental_statement.columns), index = fundamental_statement.columns)
+    period_dates = fundamental_statement.columns
 
     known_dates = (period_dates + pd.Timedelta(days = config.FUNDAMENTALS_LAG_DAYS)) <= date
     not_stale_dates = (period_dates + pd.DateOffset(months = config.FUNDAMENTALS_MAX_STALENESS_MONTHS)) >= date
@@ -14,11 +14,10 @@ def get_latest_fundamental_period(fundamental_statement, date):
     if valid_dates.empty:
         return None
     
-    return valid_dates.idxmax()
+    return valid_dates.max()
 
 def get_latest_price_date(prices, date):
-    date = pd.Timestamp(date)
-    prices_dates = pd.Series(pd.to_datetime(prices.index), index = prices.index)
+    prices_dates = prices.index
 
     not_future_dates = prices_dates <= date
     recent_dates = (prices_dates + pd.Timedelta(days = config.PRICE_SEARCH_THRESHOLD_DAYS)) >= date
@@ -28,7 +27,20 @@ def get_latest_price_date(prices, date):
     if valid_dates.empty:
         return None
     
-    return valid_dates.idxmax()
+    return valid_dates.max()
+
+def get_adj_close_price(prices, date):
+    if date is None:
+        return np.nan
+    try:
+        return prices.loc[date, "Adj Close"]
+    except KeyError:
+        return np.nan
 
 def has_missing_data(metrics):
     return any(pd.isna(m) for m in metrics)
+
+def datetime_to_string(dt):
+    if dt is None:
+        return None
+    return dt.strftime("%Y-%m-%d")
