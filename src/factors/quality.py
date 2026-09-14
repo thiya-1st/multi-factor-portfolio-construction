@@ -89,7 +89,7 @@ def calculate_operating_margin(ebit: float, total_revenue: float) -> float:
     """
 
     if has_missing_data([ebit, total_revenue]) or total_revenue == 0:
-        return np.nan #TODO: do i need logs
+        return np.nan
     
     return ebit / total_revenue 
 

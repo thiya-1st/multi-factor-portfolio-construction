@@ -1,4 +1,4 @@
-from src.factors.utils import has_missing_data
+from src.factors.utils import has_missing_data, get_adj_close_price
 
 import numpy as np
 import pandas as pd
@@ -159,21 +159,18 @@ def build_value_table(
         capital_expenditure = cash_flow.loc["Capital Expenditure" , latest_cash_flow_period]
     else:
         operating_cash_flow = capital_expenditure = np.nan
-    
-    if latest_price_date is not None:
-        price_adj_close = prices.loc[latest_price_date, "Adj Close"] #TODO: same function as momentum
-    else:
-        price_adj_close = np.nan
+
+    adj_close_price = get_adj_close_price(prices, latest_price_date)
 
     try:
         shares_outstanding = metadata.loc[ticker, "sharesOutstanding"]
     except:
         shares_outstanding = np.nan
 
-    if has_missing_data([price_adj_close, shares_outstanding]):
+    if has_missing_data([adj_close_price, shares_outstanding]):
         market_cap = np.nan
     else:
-        market_cap = price_adj_close * shares_outstanding
+        market_cap = adj_close_price * shares_outstanding
         
     ev_ebitda = calculate_ev_ebitda(total_debt, ebitda, cash, market_cap)
     free_cash_flow_yield = calculate_fcf_yield(operating_cash_flow, capital_expenditure, market_cap)

@@ -1,9 +1,9 @@
 from src import config
 
 import pandas as pd
+import numpy as np
 
 def get_latest_fundamental_period(fundamental_statement, date):
-    date = pd.Timestamp(date)
     period_dates = pd.Series(pd.to_datetime(fundamental_statement.columns), index = fundamental_statement.columns)
 
     known_dates = (period_dates + pd.Timedelta(days = config.FUNDAMENTALS_LAG_DAYS)) <= date
@@ -17,7 +17,6 @@ def get_latest_fundamental_period(fundamental_statement, date):
     return valid_dates.idxmax()
 
 def get_latest_price_date(prices, date):
-    date = pd.Timestamp(date)
     prices_dates = pd.Series(pd.to_datetime(prices.index), index = prices.index)
 
     not_future_dates = prices_dates <= date
@@ -29,6 +28,14 @@ def get_latest_price_date(prices, date):
         return None
     
     return valid_dates.idxmax()
+
+def get_adj_close_price(prices, date):
+    if date is None:
+        return np.nan
+    try:
+        return prices.loc[date, "Adj Close"]
+    except KeyError:
+        return np.nan
 
 def has_missing_data(metrics):
     return any(pd.isna(m) for m in metrics)
