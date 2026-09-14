@@ -96,7 +96,7 @@ def calculate_operating_margin(ebit: float, total_revenue: float) -> float:
 def build_quality_table(
         ticker: str,
         ticker_country: str,
-        date: pd.Timestamp,
+        string_date: pd.Timestamp,
         balance_sheet: pd.DataFrame,
         income_statement: pd.DataFrame,
         latest_balance_sheet_period: Optional[pd.Timestamp],
@@ -117,7 +117,7 @@ def build_quality_table(
         ticker: Ticker symbol for the company being processed.
         ticker_country: Company's country, passed through to
             calculate_roic for the tax rate fallback.
-        date: Rebalance date this row corresponds to.
+        string_date: Rebalance date this row corresponds to.
         balance_sheet: Balance sheet data for this ticker, indexed by
             field name with periods as columns.
         income_statement: Income statement data for this ticker, indexed
@@ -157,7 +157,7 @@ def build_quality_table(
 
     quality_table.append({
         "ticker": ticker,
-        "date": date,
+        "date": string_date,
         "roic": roic,
         "gross margin": gross_margin,
         "operating margin": operating_margin

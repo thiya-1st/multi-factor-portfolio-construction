@@ -86,7 +86,7 @@ def calculate_earnings_yield(
 
 def build_value_table(
         ticker: str,
-        date: pd.Timestamp,
+        string_date: pd.Timestamp,
         balance_sheet: pd.DataFrame,
         cash_flow: pd.DataFrame,
         income_statement: pd.DataFrame,
@@ -112,7 +112,7 @@ def build_value_table(
 
     Parameters:
         ticker: Ticker symbol for the company being processed.
-        date: Rebalance date this row corresponds to.
+        string_date: Rebalance date this row corresponds to.
         balance_sheet: Balance sheet data for this ticker, indexed by
             field name with periods as columns.
         cash_flow: Cash flow statement data for this ticker, indexed by
@@ -178,7 +178,7 @@ def build_value_table(
 
     value_table.append({
         "ticker": ticker,
-        "date": date,
+        "date": string_date,
         "ev_ebitda": ev_ebitda,
         "free cash flow yield": free_cash_flow_yield,
         "earnings yield": earnings_yield

@@ -18,9 +18,7 @@ def calculate_momentum(prices, date, lookback_months, skip_num_months):
         return np.nan
     return current_price / past_price - 1
 
-def build_momentum_table(ticker, date, prices, latest_price_date, momentum_table):
-
-    prices.index = pd.to_datetime(prices.index.astype(str).str[:10])
+def build_momentum_table(ticker, string_date, prices, latest_price_date, momentum_table):
 
     momentum_12_1 = calculate_momentum(prices, latest_price_date, 12, 1)
     momentum_6 = calculate_momentum(prices, latest_price_date, 6, 0) 
@@ -28,7 +26,7 @@ def build_momentum_table(ticker, date, prices, latest_price_date, momentum_table
 
     momentum_table.append({
         "ticker": ticker,
-        "date": date,
+        "date": string_date,
         "momentum_12_1": momentum_12_1,
         "momentum_6": momentum_6,
         "momentum_3": momentum_3
